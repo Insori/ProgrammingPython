@@ -7,3 +7,7 @@ print('Hello, '+name+'!')   #JAVA 형식
 print('Hello, %s!' % name)  #C 형식
 print('Hello, {}!'.format(name))    #format 함수
 print(f'Hello, {name}!')    #f-string 형식
+
+student_number=2212
+name='인소리'
+print(f'학번: {student_number}, 이름: {name}')
