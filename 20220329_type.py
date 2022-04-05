@@ -23,3 +23,22 @@ print(type(10/27))  #<class 'float'>
 print(type(10//27))   #<class 'int'>
 print(type(10/5))    #<class 'float'>
 
+
+#변수 이름 규칙, 자료형변환 - 변수,함수는 밑줄, 클래스는 대문자
+#my_mbti, my_function(), MyClass        #java - myMbti: camel-case, JS - my_mbti: snake-case
+my_mbti = 'INFP'
+print(f'My MBTI: {my_mbti}')
+#문자열+정수형 X
+print('My MBTI:'+my_mbti+', age: '+str(age) )  #java: String.toString(age), python: str(age)
+height = '170.0'
+print(float(height)+10)     #java: Float.parseFloat(height), python: float(height)
+
+#str(), float(), int(): 자료형변환 함수
+
+# +연산자: 숫자+숫자: 숫자*숫자 => 덧셈, 문자+문자=>문자문자
+# *연산자: 숫자*숫자 => 곱셈, 문자*숫자 => 문자를 숫자만큼 반복
+print(18*2) #36
+print('2'*4)    #'2222'
+
+#짝을 10번 출력
+print('짝'*10)
