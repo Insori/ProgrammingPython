@@ -51,6 +51,24 @@ print(0o10)     #8진수 10 => 8
 print(0x10)     #16진수 10 => 16
 print(0xFF)     #16진수 FF => 255
 
-#10진수 -> 2진수
+#10진수 -> 2진수, 8진수, 16진수
 print(bin(10))      #0b1010
 print(bin(9))       #0b1001
+print(oct(10))      #0o12
+print(hex(10))      #0xa
+
+#지수 표현
+print(f'지구의 나이: {4.543e9}살')    #float
+print(f'원자의 크기: {1e-10}m')      #e를 단독으로 쓰면 변수로 인식해서 에러가 남 1e처럼 선언을 해줘야 함
+
+#복소수
+print(9+1j)     #j도 단독으로 쓸 수 없기 떄문에(변수로 인식) 1j로 선언  #결과에 ()가 있는 이유 : (9+1j)를 하나의 수로 봄
+print(9+1j-4-5j)    #실수끼리, 허수끼리 계산 - (5-4j)
+ys = 9+1j
+hj = 7-3j
+print(ys+hj)    #(16-2j)
+print(ys.real)  #9.0
+print(hj.imag)  #-3.0
+print(hj.conjugate())   #켤레복소수
+print(hj*hj.conjugate())    #(58+0j) = 49+(-3j * 3j) = 49+9 = (58+0j) - 복소수이기 때문에 j를 넣어줌
+print(type(ys))     #<class 'complex'>
