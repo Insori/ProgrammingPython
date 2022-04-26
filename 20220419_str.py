@@ -88,4 +88,10 @@ print(s.format('손흥민',7,True))
 s='name: {name}, number: {n}, soccer: {s}'
 print(s.format(name='손흥민',n=7,s=True))
 
+#Quiz 1
+phone_number = '010-9793-8993'
+print(phone_number[9:13])   #8993
+print(phone_number[9:])   #8993
+print(phone_number[-4:])   #8993
+
 
