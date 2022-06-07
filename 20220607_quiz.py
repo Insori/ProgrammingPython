@@ -28,3 +28,21 @@ print(f'{student_number[0]}학년 {student_number[1]}반 {h} {int(student_number
 
 print('-'*20)
 
+# 3. N-sum
+number = 331
+sum_val=0
+while number != 0:
+    sum_val+=number%10
+    number=number//10
+print(sum_val)
+
+# 3-1. 문자 한 자리씩 빼서 계산하기
+number = 331
+number_s = str(number)
+sum_val2=0
+for num in number_s:
+    sum_val2+=int(num)
+print(sum_val2)
+
+
+
