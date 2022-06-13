@@ -44,5 +44,24 @@ for num in number_s:
     sum_val2+=int(num)
 print(sum_val2)
 
+print('-'*20)
+# 4. 369 게임(1~100)
+#1 2 짝 4 5 짝 ... 짝짝 100
+#'3','6','9' 를 세자 -> count
+#count==0 이면 숫자 출력
+#count!=0 이면 count만큼 짝 출력
+for number in range(1,100+1):
+    number_s = str(number)
+    count = 0
+    for ch in number_s: #글자 하나씩 꺼내기
+        if ch=='3' or ch=='6' or ch=='9':
+            count+=1
+    if count==0:
+        print(number)
+    else:
+        print('짝'*count)
+
+
+
 
 
