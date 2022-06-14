@@ -67,3 +67,10 @@ def my_print6(name, *args):
         print(arg)
 my_print6('나재민', 23, 'NCT DREAM', 'BEATBOX')    # name에 '나재민'이 들어가고 *args에 23, 'NCT DREAM', 'BEATBOX'가 들어감
 
+print('-'*20)
+
+# def my_print7(name, age=20, group):   # 기본값 있는 파라미터 뒤에 기본값 없는 파라미터가 올 수 없음
+#     print(f'{name}: {age}살입니다. {group} 소속입니다.')
+# my_print7('사카타 긴토키', '은혼')
+
+
