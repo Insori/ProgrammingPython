@@ -53,13 +53,17 @@ print('-'*20)
 for number in range(1,100+1):
     number_s = str(number)
     count = 0
-    for ch in number_s: #글자 하나씩 꺼내기
-        if ch=='3' or ch=='6' or ch=='9':
-            count+=1
+    # for ch in number_s: #글자 하나씩 꺼내기
+    #     if ch=='3' or ch=='6' or ch=='9':
+    #         count+=1
+    count+=number_s.count('3')
+    count+=number_s.count('6')
+    count+=number_s.count('9')
     if count==0:
         print(number)
     else:
         print('짝'*count)
+
 
 
 
