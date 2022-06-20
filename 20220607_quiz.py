@@ -64,6 +64,17 @@ for number in range(1,100+1):
     else:
         print('짝'*count)
 
+print('-'*20)
+# gugudan(): 구구단 2단 출력하자
+def gugudan(num):
+    for i in range(1,10):
+        print(f'{num} X {i} = {num*i}')
+gugudan(2)
+
+print('-'*20)
+# gugudan(5): 구구단 5단 출력하자
+gugudan(5)
+
 
 
 
