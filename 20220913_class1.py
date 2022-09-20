@@ -41,6 +41,11 @@ class Game:
         self.genre = 'MMORPG'
         self.platform = 0
 
+    # def set_genre(self, genre):
+    #     genres = ['FPS','MMORPG','Action','SPORTS']
+    #     if genre in genres:
+    #         self.genre = genre
+
     def run(self):  # 시험에 나옴 self
         print('실행')
     def login(self, id, password):
