@@ -9,6 +9,12 @@ class Student:
         self.name = name
     def __str__(self):
         return f'학번: {self.student_number}\t 이름: {self.name}'
+    def __getitem__(self, key):     #객체[key] 재정의
+        if key == '학번':
+            return self.student_number
+        elif key == '학년':
+            return self.student_number[0]
+
 
 # 동아리
 # 속성: 동아리명, 장소, 멤버들
@@ -37,6 +43,11 @@ class Club:
         self.action = action
     def act(self):
         print(self.action)
+    def __len__(self):  #동아리 멤버 수 리턴
+        return len(self.members)
+    def __del__(self):  #del 객체 했을 때, 메모리에서 삭제하기 전에 실행
+        print(f'{self.name}은(는) 간다.')
+
 
 학생1 = Student('2212', '인소리')
 print(학생1)
@@ -63,3 +74,29 @@ print(Club.get_count_club())    # 동아리2.get_count_club()
 
 # 축구부 멤버수 출력
 print(len(동아리1.members))
+
+#특수 메소드
+#__init__(self, ...)
+
+#__str__(self) 클래스의 객체를 문자열화 한다
+#(주로 객체의 속성을 알아볼 수 있도록 정보 표시)
+
+#__len__(self)      len(객체) 재정의
+print('__len__()')
+print(len(동아리1))    #동아리1의 멤버 수를 출력
+
+#__getitem__(self, key)     #객체[key] 재정의
+print('__getitem__()')
+print(학생1)
+print(학생1['학번'])    #print(학생1.student_number)
+print(학생1['학년'])
+
+#__del__(self)  객체를 명시적으로 지울 때 호출되는 메소드
+# number = 10
+# print(number)
+# del number
+# print(number)
+
+print('__del__()')
+print(동아리1)
+del 동아리1
