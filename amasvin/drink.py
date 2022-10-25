@@ -23,14 +23,30 @@ class Drink:
     def __init__(self, name, price):
         self.name = name
         self.price = price
-        self.cup_size = '레귤러'
-        self.sugar = '50%'
-        self.ice = '기본'
+        self.cup_size = 0
+        self.sugar = 1
+        self.ice = 2
 
     def __str__(self):
-        return f'이름: {self.name}\t가격: {self.price}원\t컵 사이즈: {self.cup_size}\t당도: {self.sugar}\t얼음량: {self.ice}'
+        return f'이름: {self.name}\t가격: {self.price}원\t컵 사이즈: {Drink._CUP_SIZES[self.cup_size]}\t당도: {Drink._SUGARS[self.sugar]}\t얼음량: {Drink._ICES[self.ice]}'
 
-음료1 = Drink("아메리카노",1800)
+    def set_cup_size(self):
+        # 사용자에게 숫자를 묻자 1: 레귤러, 2: 점보
+        for index, cup_size_label in enumerate(Drink._CUP_SIZES):
+            print(f'{index + 1}. {cup_size_label}')
+        cup_size = input('컵 사이즈를 선택하세요: ')
+        # 그냥 엔터 치면 기본값 넣자
+        if cup_size == '':
+            self.cup_size = 0
+        else:
+            self.cup_size = int(cup_size) - 1
+        # self.cup_size가 점보(2)일 때, 가격 += 500
+        if self.cup_size == 1:
+            self.price += 500
+
+
+음료1 = Drink('아메리카노', 1800)
+음료1.set_cup_size()
 print(음료1)
 
 
