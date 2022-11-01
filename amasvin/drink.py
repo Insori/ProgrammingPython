@@ -44,9 +44,32 @@ class Drink:
         if self.cup_size == 1:
             self.price += 500
 
+    def set_sugar(self):
+        for index, sugar_label in enumerate(Drink._SUGARS):
+            print(f'{index + 1}. {sugar_label}')
+        sugar = input('당도를 선택하세요: ')
+        if sugar == '':
+            self.sugar = 1
+        else:
+            self.sugar = int(sugar) - 1
+
+    def set_ice(self):
+        for index, ice_label in enumerate(Drink._ICES):
+            print(f'{index + 1}. {ice_label}')
+        ice = input('얼음량을 선택하세요: ')
+        if ice == '':
+            self.ice = 2
+        else:
+            self.ice = int(ice) - 1
+
+    def order(self):
+        # 함수를 호출하고 싶을 때는 변수와 같이 self로 호출하면 된다.
+        self.set_cup_size()
+        self.set_sugar()
+        self.set_ice()
 
 음료1 = Drink('아메리카노', 1800)
-음료1.set_cup_size()
+음료1.order()
 print(음료1)
 
 
