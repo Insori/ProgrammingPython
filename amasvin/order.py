@@ -11,7 +11,7 @@ class Order:
 
     def __str__(self):
         # self.order_menu에서 drink 하나씩 꺼내서 출력하자
-        return '\n'.join(map(str(drink) for drink in self.order_menu))
+        return '\n'.join((str(drink) for drink in self.order_menu))
         # 총 주문 금액 출력
 
     def init_menu(self):    # 메뉴판 초기화
