@@ -1,4 +1,4 @@
 import hello2
-import hello_func
+import hello_func as h
 
-hello_func.hello()  # 앞에 모듈명을 붙여줘야 한다.(hello_func)
+h.hello()
